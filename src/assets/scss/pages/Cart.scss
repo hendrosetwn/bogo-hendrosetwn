@@ -1,0 +1,543 @@
+.cart {
+  padding-bottom: 50px;
+  margin: 20px 50px 0 50px;
+
+  @include breakpoint(mobile-large) {
+    width: 425px;
+    margin: 20px auto;
+  }
+
+  @include breakpoint(tablet) {
+    width: 924px;
+    margin: 20px 50px;
+  }
+
+  @include breakpoint(desktop) {
+    width: 1240px;
+    margin: 20px 100px 20px 100px;
+  }
+
+  &__header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 25px;
+      padding-bottom: 10px;
+    }
+
+    @include breakpoint(desktop) {
+      margin-bottom: 35px;
+      padding-bottom: 15px;
+    }
+
+    &--title {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0;
+
+      @include breakpoint(tablet) {
+        font-size: 20px;
+      }
+
+      @include breakpoint(desktop) {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    & .first {
+      display: flex;
+      flex-direction: column;
+
+      @include breakpoint(tablet) {
+        width: 500px;
+      }
+
+      @include breakpoint(desktop) {
+        width: 720px;
+      }
+
+      &__selectall {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #000;
+
+        @include breakpoint(tablet) {
+          margin-bottom: 20px;
+          padding-bottom: 20px;
+        }
+
+        @include breakpoint(desktop) {
+          margin-bottom: 30px;
+          padding-bottom: 30px;
+        }
+
+        &--checkall {
+          display: flex;
+          align-items: center;
+
+          & input {
+            width: 15px;
+            height: 15px;
+            margin: 0 5px 0 0;
+            cursor: pointer;
+
+            @include breakpoint(tablet) {
+              width: 20px;
+              height: 20px;
+              margin: 0 10px 0 0;
+            }
+
+            @include breakpoint(desktop) {
+              width: 30px;
+              height: 30px;
+              margin: 0 20px 0 0;
+            }
+          }
+
+          & label {
+            font-size: 12px;
+            cursor: pointer;
+
+            @include breakpoint(tablet) {
+              font-size: 16px;
+            }
+
+            @include breakpoint(desktop) {
+              font-size: 20px;
+            }
+          }
+        }
+
+        &--delete {
+          display: flex;
+          align-items: center;
+
+          & p {
+            display: inline-block;
+            font-size: 12px;
+            margin: 0;
+            cursor: pointer;
+
+            @include breakpoint(tablet) {
+              font-size: 16px;
+            }
+
+            @include breakpoint(desktop) {
+              font-size: 20px;
+            }
+          }
+
+          & i {
+            font-size: 12px;
+            color: #000;
+            transition: 0.3s;
+            margin-left: 5px;
+
+            @include breakpoint(tablet) {
+              font-size: 16px;
+              margin-left: 10px;
+            }
+
+            @include breakpoint(desktop) {
+              font-size: 20px;
+              margin-left: 20px;
+            }
+
+            &:hover {
+              color: #bbb;
+            }
+          }
+        }
+      }
+
+      &__product {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+        border-bottom: 1px solid #000;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+
+        @include breakpoint(tablet) {
+          margin-bottom: 20px;
+          padding-bottom: 20px;
+        }
+
+        @include breakpoint(desktop) {
+          margin-bottom: 30px;
+          padding-bottom: 30px;
+        }
+
+        &--check {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          & input {
+            margin: 0 5px 0 0;
+            width: 15px;
+            height: 15px;
+
+            @include breakpoint(tablet) {
+              width: 20px;
+              height: 20px;
+              margin: 0 10px 0 0;
+            }
+
+            @include breakpoint(desktop) {
+              width: 30px;
+              height: 30px;
+              margin: 0 20px 0 0;
+            }
+          }
+
+          & label {
+            & img {
+              width: 75px;
+              height: auto;
+              cursor: pointer;
+
+              @include breakpoint(tablet) {
+                width: 150px;
+              }
+              @include breakpoint(desktop) {
+                width: 250px;
+              }
+            }
+          }
+        }
+
+        &--information {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+
+          &--link {
+            text-decoration: none;
+            color: #000;
+
+            & h1 {
+              font-size: 14px;
+              margin: 0 0 10px 0;
+              text-decoration: none;
+              width: 135px;
+
+              @include breakpoint(tablet) {
+                font-size: 18px;
+                margin: 0 0 20px 0;
+                width: 180px;
+              }
+
+              @include breakpoint(desktop) {
+                font-size: 22px;
+                margin: 0 0 30px 0;
+                width: 230px;
+              }
+            }
+          }
+
+          & h3 {
+            font-size: 12px;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+
+            @include breakpoint(tablet) {
+              font-size: 16px;
+              margin: 0 0 20px 0;
+            }
+
+            @include breakpoint(desktop) {
+              font-size: 20px;
+              margin: 0 0 30px 0;
+            }
+
+            & span {
+              font-weight: 500;
+            }
+          }
+
+          &--price {
+            font-size: 12px;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+
+            @include breakpoint(tablet) {
+              font-size: 16px;
+              margin: 0 0 20px 0;
+            }
+
+            @include breakpoint(desktop) {
+              font-size: 20px;
+              margin: 0 0 30px 0;
+            }
+
+            & span {
+              font-weight: 500;
+            }
+          }
+
+          &--quantity {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 10px;
+
+            @include breakpoint(tablet) {
+              margin: 0 0 20px 0;
+            }
+
+            @include breakpoint(desktop) {
+              margin: 0 0 30px 0;
+            }
+
+            &--minus {
+              padding: 5px;
+              background-color: #fff;
+              border: 1px solid #666;
+              border-right: none;
+              cursor: pointer;
+
+              @include breakpoint(tablet) {
+                font-size: 16px;
+                padding: 7.5px;
+              }
+
+              @include breakpoint(desktop) {
+                font-size: 20px;
+                padding: 10px;
+              }
+            }
+
+            &--number {
+              padding: 4.5px;
+              font-weight: 500;
+              width: 75px;
+              font-size: 12px;
+              border: 1px solid #666;
+              border-left: none;
+              border-right: none;
+              text-align: center;
+              font-family: "Open Sans";
+
+              @include breakpoint(tablet) {
+                font-size: 16px;
+                padding: 6px;
+                width: 100px;
+              }
+
+              @include breakpoint(desktop) {
+                font-size: 20px;
+                padding: 7.5px;
+                width: 150px;
+              }
+            }
+
+            &--plus {
+              padding: 5px;
+              background-color: #fff;
+              border: 1px solid #666;
+              border-left: none;
+              cursor: pointer;
+
+              @include breakpoint(tablet) {
+                padding: 7.5px;
+                font-size: 16px;
+              }
+
+              @include breakpoint(desktop) {
+                font-size: 20px;
+                padding: 10px;
+              }
+            }
+          }
+
+          &--subtotal {
+            font-size: 12px;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+
+            @include breakpoint(tablet) {
+              font-size: 16px;
+              margin: 0 0 20px 0;
+            }
+
+            @include breakpoint(desktop) {
+              font-size: 20px;
+              margin: 0 0 30px 0;
+            }
+
+            & span {
+              font-weight: 500;
+            }
+          }
+        }
+
+        &--close {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+
+          & i {
+            font-size: 12px;
+            color: #000;
+            transition: 0.3s;
+            cursor: pointer;
+
+            @include breakpoint(tablet) {
+              font-size: 16px;
+            }
+
+            &:hover {
+              color: red;
+              transform: rotate(90deg);
+            }
+          }
+        }
+      }
+    }
+
+    & .second {
+      display: flex;
+      flex-direction: column;
+      position: static;
+
+      @include breakpoint(tablet) {
+        width: 370px;
+        border: 2px solid #000;
+        padding: 20px;
+        background-color: #ddd;
+        position: sticky;
+        top: 20px;
+      }
+
+      @include breakpoint(desktop) {
+        width: 450px;
+        position: sticky;
+        top: 30px;
+      }
+
+      &__subtotal {
+        margin-bottom: 20px;
+
+        @include breakpoint(tablet) {
+          margin-bottom: 25px;
+        }
+
+        @include breakpoint(desktop) {
+          margin-bottom: 35px;
+        }
+
+        &--price {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid #000;
+          margin-bottom: 15px;
+          padding-bottom: 15px;
+
+          @include breakpoint(tablet) {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+          }
+
+          @include breakpoint(desktop) {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+          }
+
+          &--total {
+            font-size: 12px;
+            letter-spacing: 3px;
+            margin: 0;
+
+            @include breakpoint(tablet) {
+              font-size: 16px;
+              letter-spacing: 5px;
+            }
+
+            @include breakpoint(desktop) {
+              font-size: 20px;
+              letter-spacing: 7px;
+            }
+          }
+
+          &--price {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
+
+            @include breakpoint(tablet) {
+              font-size: 22px;
+            }
+
+            @include breakpoint(desktop) {
+              font-size: 26px;
+            }
+          }
+        }
+
+        &--text {
+          font-size: 10px;
+          font-style: italic;
+          color: rgb(70, 70, 70);
+          margin: 0;
+
+          @include breakpoint(tablet) {
+            font-size: 12px;
+          }
+
+          @include breakpoint(desktop) {
+            font-size: 14px;
+          }
+        }
+      }
+
+      &__select {
+        width: 100%;
+        font-size: 12px;
+        padding: 14px 20px;
+        background-color: #212121;
+        color: #fff;
+        cursor: pointer;
+        border: 1px solid #212121;
+        font-family: "Open Sans";
+        transition: 0.3s;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        @include breakpoint(tablet) {
+          font-size: 16px;
+        }
+
+        @include breakpoint(desktop) {
+          font-size: 20px;
+        }
+
+        &:hover {
+          background-color: #000;
+          border: 1px solid #000;
+        }
+      }
+    }
+  }
+}

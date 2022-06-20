@@ -1,0 +1,16 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+@import 'components/fonts.scss';
+@import 'components/mixins.scss';
+
+@import 'pages/Cart.scss';
+@import 'pages/Checkout.scss';
+@import 'pages/ProductDetail.scss';
+@import 'pages/Login.scss';
+@import 'pages/Register.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans";
+}
